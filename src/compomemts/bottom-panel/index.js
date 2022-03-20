@@ -1,3 +1,3 @@
-import AppBottom from "./bottom-panel"; 
+import AppBottom from './bottom-panel';
 
 export default AppBottom;
