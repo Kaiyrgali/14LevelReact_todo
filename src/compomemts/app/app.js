@@ -138,13 +138,15 @@ export default class App extends Component {
   }
 
     render() {
-      const {todoData, term, filter} = this.state;
+      const {todoData, term, filter} = this.state; 
       const visibleItems = this.filter(this.search(todoData, term), filter);
       return (
       <div className="todo-app"> 
           <AppHeader todos={this.state.todoData} /> 
           <SearchPanel filter={this.state.filter}
-          onFilterChange={this.onFilterChange} />
+          onFilterChange={this.onFilterChange} 
+          filterBySearch={this.filterBySearch} 
+          />
           <TodoList todos={visibleItems}
           newValue={this.newValue}
           onDeleted = { this.deleteItem} 
